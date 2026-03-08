@@ -437,8 +437,9 @@ footer {
   }
 
   .container {
-    width: 92%;
-    margin: 40px auto;
+    width: 96%; 
+    margin: 30px auto; 
+    padding: 0 10px; 
   }
 
   .content-box {
@@ -449,11 +450,11 @@ footer {
     width: 150px;
   }
    
-.image img {
-    width: 100%; /* บังคับรูปภาพไม่ให้กว้างเกินหน้าจอมือถือ */
+  .image img {
+    width: 100%; 
     height: auto;
     border-radius: 12px;
-  }
+    }
   /* --- แก้ไขส่วน Dropdown --- */
   
   /* 1. จัดตำแหน่งกล่องให้อยู่ตรงกลาง ไม่ลอย และซ่อนไว้ก่อน */

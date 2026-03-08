@@ -448,20 +448,35 @@ footer {
   .footer-logo {
     width: 150px;
   }
-/* เพิ่ม :focus เข้าไปเพื่อให้ทำงานตอนใช้นิ้วแตะ 1 ครั้ง */
-    .dropdown:hover .dropdown-content,
-    .dropdown:focus-within .dropdown-content,
-    .dropdown:focus .dropdown-content {
-        display: block;
-        opacity: 1;
-        visibility: visible;
-        position: relative;
-    }
+
+  /* --- แก้ไขส่วน Dropdown --- */
+  
+  /* 1. จัดตำแหน่งกล่องให้อยู่ตรงกลาง ไม่ลอย และซ่อนไว้ก่อน */
+  .dropdown-content {
+    position: static !important;
+    transform: none !important;
+    width: 90%;
+    margin: 10px auto 0 auto;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 8px;
+    box-shadow: none;
+    padding: 10px 0;
     
-    /* ซ่อน outline สีฟ้าๆ ที่อาจจะขึ้นมาตอนกดในบางเบราว์เซอร์ */
-    .dropdown {
-        outline: none;
-    }
+    /* บังคับซ่อน เพื่อให้ JS เป็นตัวสั่งเปิดแทน */
+    display: none !important; 
+    opacity: 1;
+    visibility: visible;
+  }
+
+  /* 2. เมื่อมีคลาส .active (ที่ JS เติมให้ตอนกด) ค่อยแสดงกล่องออกมา */
+  .dropdown.active .dropdown-content {
+    display: block !important;
+  }
+    
+  /* ซ่อน outline สีฟ้าๆ ที่อาจจะขึ้นมาตอนกดในบางเบราว์เซอร์ */
+  .dropdown {
+    outline: none;
+  }
 
 }
 

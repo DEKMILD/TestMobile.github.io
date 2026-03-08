@@ -448,6 +448,20 @@ footer {
   .footer-logo {
     width: 150px;
   }
+/* เพิ่ม :focus เข้าไปเพื่อให้ทำงานตอนใช้นิ้วแตะ 1 ครั้ง */
+    .dropdown:hover .dropdown-content,
+    .dropdown:focus-within .dropdown-content,
+    .dropdown:focus .dropdown-content {
+        display: block;
+        opacity: 1;
+        visibility: visible;
+        position: relative;
+    }
+    
+    /* ซ่อน outline สีฟ้าๆ ที่อาจจะขึ้นมาตอนกดในบางเบราว์เซอร์ */
+    .dropdown {
+        outline: none;
+    }
 
 }
 

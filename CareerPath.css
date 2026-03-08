@@ -424,6 +424,11 @@ body {
   .dropdown {
     outline: none;
   }
+  .dropdown-content div, 
+  .dropdown-content a {
+    font-size: 14px; /* ลดขนาดตัวอักษรลง */
+    padding: 10px 16px; /* ลด Padding ลงนิดหน่อยเพื่อให้กล่องดูพอดีขึ้น */
+  }
 
 }
 

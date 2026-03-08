@@ -333,7 +333,7 @@ footer {
     transform: none;
   }
 
-  .header-title h1 {
+  .header-title h1 { /* หากใน HTML ไม่ใช่ <h1> ให้แก้กลับเป็นคลาสเดิมนะครับ */
     font-size: 18px;
   }
 
@@ -356,13 +356,33 @@ footer {
     font-size: 16px;
   }
 
+  /* ---------------------------------------------------
+     จุดที่แก้ไขเพิ่ม เพื่อแก้ปัญหาพื้นที่สีขาวและรูปล้นจอ
+  ---------------------------------------------------- */
   .hero {
-    height: 220px;
+    height: auto; /* ปลดล็อก 220px ให้ยืดหยุ่นตามเนื้อหา เพื่อลดช่องว่างสีขาว */
+    min-height: 50px; 
   }
 
   .hero h2 {
     font-size: 28px;
   }
+
+  .program-section {
+    padding: 30px 5%; /* ลดระยะห่างด้านบนและล่างของ Section ลง */
+  }
+
+  .program-container {
+    flex-direction: column; /* ให้รูปภาพและข้อความเรียงต่อกันบนลงล่าง */
+    gap: 30px; /* ลดระยะห่างระหว่างรูปภาพกับข้อความ */
+  }
+
+  .program-image img {
+    width: 100%; /* บังคับรูปภาพไม่ให้กว้างเกินหน้าจอมือถือ */
+    height: auto;
+    border-radius: 12px;
+  }
+  /* --------------------------------------------------- */
 
   .container {
     width: 92%;
@@ -376,6 +396,7 @@ footer {
   .footer-logo {
     width: 150px;
   }
+
    /* 1. จัดตำแหน่งกล่องให้อยู่ตรงกลาง ไม่ลอย และซ่อนไว้ก่อน */
   .dropdown-content {
     position: static !important;
